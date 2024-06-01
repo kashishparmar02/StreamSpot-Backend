@@ -17,4 +17,13 @@ app.use(express.urlencoded({extended:true,limit:"16kb"})) //urlparsing
 app.use(express.static("public"))//static images and akk things from our local
 app.use(cookieParser())
 
+
+//routes
+import userRouter from './routes/user.routes.js'
+
+
+//routes declaration
+app.use("/api/v1/users",userRouter)
+//http://localhost:port/api/v1/users/register-> /user prefix
+//those routes in  userrouter are accesible like this
 export {app}
