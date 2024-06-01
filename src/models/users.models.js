@@ -83,3 +83,6 @@ export const User = mongoose.model("User", userSchema);
 
 
 //jwt is a bearer token,one who have token can access
+//Bcrypt is used to securely hash passwords before storing them in the database, ensuring that even if the database is compromised, the passwords are not easily accessible.
+
+//JWT is used for securely transmitting information between parties (usually the client and the server) in a compact, URL-safe manner. It is primarily used for authentication and authorization purposes.
