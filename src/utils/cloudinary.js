@@ -19,7 +19,9 @@ import fs from "fs"
                 }
             )
             //upload success
-            console.log("file uploaded successfully",response.url )
+            // console.log("file uploaded successfully",response.url )
+            //as success unlink files from server
+            fs.unlinkSync(localFilePath)
             return response
         } catch (error) {
             fs.unlinkSync(localFilePath)//remove the file from server as upload failed, used sync as first complete this op then only proceed
